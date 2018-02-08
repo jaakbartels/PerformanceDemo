@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace PerformanceDemo
 {
@@ -75,7 +73,7 @@ namespace PerformanceDemo
 
         public static UsState FromCode(string code)
         {
-            _statesByCode.TryGetValue(code, out var result);
+            _statesByCode.TryGetValue(code.ToUpper(), out var result);
             return result;
         }
     }
