@@ -73,7 +73,7 @@ namespace PerformanceDemo
 
         public static UsState FromCode(string code)
         {
-            return All.FirstOrDefault(s => s.Code.ToLower() == code.ToLower());
+            return All.FirstOrDefault(s => s.Code.Equals(code, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }
